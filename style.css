@@ -7,38 +7,44 @@ html {
 
 body {
     margin: 0;
-    background-color: #f8fafc;
+    background-color: #f1f5f9; 
     color: #1e293b;
     line-height: 1.6;
 }
 
+/* Центральний контейнер ТІЛЬКИ для контенту (сертифікатів) */
 .container {
     width: 1000px;
     margin: 0 auto;
 }
 
-/* Шапка сайту */
+/* Шапка сайту — тепер на всю ширину екрана */
 header {
     background-color: #0f172a;
     color: white;
-    padding: 18px 0;
     position: sticky;
     top: 0;
     z-index: 100;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
+/* Розтягуємо вміст шапки до країв монітора з відступами */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;             /* На всю ширину екрана */
+    box-sizing: border-box;
+    padding: 18px 40px;      /* Відступи 40px від лівого та правого краю */
 }
 
+/* ФІО тепер чітко у лівому кутку екрана */
 .logo {
     font-size: 20px;
     font-weight: 700;
-    color: #38bdf8;
+    color: #ffffff; 
     letter-spacing: 0.5px;
+    text-align: left;
 }
 
 .right-menu {
@@ -60,19 +66,24 @@ header nav ul li {
     color: #cbd5e1;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.2s;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .link:hover {
-    color: #38bdf8;
+    color: #38bdf8; 
+    transform: scale(1.1);
 }
 
 /* Головний блок (Hero) */
 .hero {
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    background: radial-gradient(circle, #1e3a8a 0%, #0f172a 100%);
     color: white;
     text-align: center;
     padding: 120px 0;
+    border-bottom-left-radius: 24px;  
+    border-bottom-right-radius: 24px; 
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.2);
 }
 
 .hero-container {
@@ -85,17 +96,16 @@ header nav ul li {
     font-weight: 700;
 }
 
-/* Назва навчання перефарбована в темно-червоний колір */
 .hero-academy-link {
-    color: #990000;
+    color: #ef4444;
     text-decoration: none;
-    border-bottom: 2px dashed #990000;
+    border-bottom: 2px dashed #ef4444;
     transition: all 0.2s;
 }
 
 .hero-academy-link:hover {
-    color: #cc0000;
-    border-bottom-color: #cc0000;
+    color: #f87171;
+    border-bottom-color: #f87171;
 }
 
 .hero .subtitle {
@@ -107,21 +117,23 @@ header nav ul li {
     margin-right: auto;
 }
 
+/* Кнопка */
 .btn {
-    background-color: #0284c7;
+    background: linear-gradient(45deg, #0284c7, #0ea5e9);
     color: white;
     text-decoration: none;
     padding: 14px 35px;
-    border-radius: 6px;
+    border-radius: 50px; 
     font-weight: 700;
-    transition: all 0.2s;
+    transition: all 0.3s ease;
     display: inline-block;
-    box-shadow: 0 4px 6px -1px rgba(2, 132, 199, 0.4);
+    box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
 }
 
 .btn:hover {
-    background-color: #0369a1;
-    transform: translateY(-2px);
+    background: linear-gradient(45deg, #0ea5e9, #0284c7);
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(2, 132, 199, 0.6);
 }
 
 /* Секція сертифікатів */
@@ -153,68 +165,93 @@ h2 {
     flex-wrap: wrap;
 }
 
-/* Картки для PDF документів */
+/* Білі картки */
 .cert-card {
-    background-color: white;
-    color: #1e293b;
+    background-color: #ffffff; 
+    color: #1e293b;            
     text-decoration: none;
-    padding: 30px 20px;
-    border-radius: 12px;
-    width: 260px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e2e8f0;
-    transition: all 0.3s ease;
+    padding: 35px 25px;
+    border-radius: 20px; 
+    width: 250px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0; 
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .cert-icon {
-    font-size: 40px;
+    font-size: 44px;
     margin-bottom: 15px;
+    transition: transform 0.3s ease;
 }
 
 .cert-card h3 {
     font-size: 18px;
-    margin: 0 0 15px 0;
+    margin: 0 0 20px 0;
     color: #0f172a;
+    font-weight: 700;
+    transition: color 0.3s ease;
 }
 
 .view-link {
     font-size: 14px;
-    color: #0284c7;
+    color: #0284c7; 
     font-weight: 700;
     border-bottom: 2px solid transparent;
-    transition: all 0.2s;
+    transition: all 0.3s ease;
 }
 
 .cert-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    border-color: #38bdf8;
+    transform: translateY(-12px);
+    background-color: #0f172a;    
+    border-color: #38bdf8;        
+    box-shadow: 0 20px 30px -10px rgba(56, 189, 248, 0.3);
+}
+
+.cert-card:hover .cert-icon {
+    transform: translateY(-5px) scale(1.15);
+}
+
+.cert-card:hover h3 {
+    color: #ffffff;
 }
 
 .cert-card:hover .view-link {
-    color: #0369a1;
-    border-bottom-color: #0369a1;
+    color: #38bdf8;
+    border-bottom-color: #38bdf8;
 }
 
-/* Підвал з контактами */
+/* Підвал з контактами — тепер розтягнутий до країв екрана */
 footer {
-    background-color: #0f172a;
+    background: radial-gradient(circle, #1e3a8a 0%, #0f172a 100%); 
     color: #94a3b8;
-    padding: 40px 0;
     margin-top: 60px;
+    border-top-left-radius: 24px;  
+    border-top-right-radius: 24px; 
+    box-shadow: 0 -10px 25px -5px rgba(15, 23, 42, 0.2);
 }
 
+/* Розтягуємо підвал на 100% ширини монітора з внутрішніми відступами */
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    width: 100%;             /* На всю ширину екрана */
+    box-sizing: border-box;
+    padding: 40px 40px;      /* 40px відступів зліва та справа */
 }
 
+/* Копірайт зафіксовано у лівому кутку монітора */
 .footer-info {
     max-width: 400px;
+    text-align: left;
+}
+
+.footer-info p {
+    color: #cbd5e1;
+    margin: 0;
 }
 
 .contacts-block {
@@ -222,13 +259,14 @@ footer {
 }
 
 .contacts-block h3 {
-    color: #38bdf8;
+    color: #ffffff; 
     margin-top: 0;
     font-size: 20px;
 }
 
 .contacts-block p {
     margin: 8px 0;
+    color: #cbd5e1;
 }
 
 .footer-link {
@@ -239,5 +277,5 @@ footer {
 }
 
 .footer-link:hover {
-    color: #38bdf8;
+    color: #38bdf8; 
 }
