@@ -12,13 +12,12 @@ body {
     line-height: 1.6;
 }
 
-/* Центральний контейнер ТІЛЬКИ для контенту (сертифікатів) */
 .container {
     width: 1000px;
     margin: 0 auto;
 }
 
-/* Шапка сайту — тепер на всю ширину екрана */
+/* Шапка сайту */
 header {
     background-color: #0f172a;
     color: white;
@@ -28,17 +27,15 @@ header {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-/* Розтягуємо вміст шапки до країв монітора з відступами */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;             /* На всю ширину екрана */
+    width: 100%;             
     box-sizing: border-box;
-    padding: 18px 40px;      /* Відступи 40px від лівого та правого краю */
+    padding: 18px 40px;      
 }
 
-/* ФІО тепер чітко у лівому кутку екрана */
 .logo {
     font-size: 20px;
     font-weight: 700;
@@ -223,7 +220,7 @@ h2 {
     border-bottom-color: #38bdf8;
 }
 
-/* Підвал з контактами — тепер розтягнутий до країв екрана */
+/* ТВОЙ ЛЮБИМЫЙ ОБЪЁМНЫЙ БЛИК ПОДВАЛА НА МЕСТЕ */
 footer {
     background: radial-gradient(circle, #1e3a8a 0%, #0f172a 100%); 
     color: #94a3b8;
@@ -233,17 +230,15 @@ footer {
     box-shadow: 0 -10px 25px -5px rgba(15, 23, 42, 0.2);
 }
 
-/* Розтягуємо підвал на 100% ширини монітора з внутрішніми відступами */
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: 100%;             /* На всю ширину екрана */
+    width: 100%;             
     box-sizing: border-box;
-    padding: 40px 40px;      /* 40px відступів зліва та справа */
+    padding: 40px 40px;      
 }
 
-/* Копірайт зафіксовано у лівому кутку монітора */
 .footer-info {
     max-width: 400px;
     text-align: left;
@@ -278,4 +273,37 @@ footer {
 
 .footer-link:hover {
     color: #38bdf8; 
+}
+
+/* СТИЛИЗАЦИЯ СТРОГИХ КНОПОК МЕССЕНДЖЕРОВ */
+.messenger-box {
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;
+}
+
+.messenger-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный аккуратный фон */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.messenger-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #38bdf8;
+    color: #38bdf8;
+    transform: translateY(-3px); /* Кнопки аккуратно взлетают */
+}
+
+.messenger-btn i {
+    font-size: 16px;
 }
