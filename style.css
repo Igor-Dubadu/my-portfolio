@@ -18,17 +18,15 @@ body {
   box-sizing: border-box;
 }
 
-/* Шапка сайту */
+/* ИСПРАВЛЕНО: Шапка в новом цвете #023024 с легким переходом */
 header {
-  background-color: rgba(#023024f2);
-  backdrop-filter: blur(8px);
+  background: linear-gradient(135deg, #023024 0%, #0a1f38 100%);
   color: white;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(2, 48, 36, 0.2);
 }
-/* ИСПРАВЛЕНО: Растянули шапку до краев экрана, прижали имя влево */
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -74,18 +72,18 @@ header nav ul li {
   color: #38bdf8;
 }
 
-/* Головний блок (Hero) */
+/* ИСПРАВЛЕНО: Блок Hero теперь идеально сочетается и плавно переходит из #023024 */
 .hero {
-  background: radial-gradient(circle at top, #1e3a8a 0%, #0f172a 100%);
+  background: radial-gradient(circle at top, #023024 0%, #0f172a 100%);
   color: white;
   text-align: center;
   padding: 90px 20px;
   border-bottom-left-radius: 32px;
   border-bottom-right-radius: 32px;
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+  box-shadow: 0 20px 40px rgba(2, 48, 36, 0.15);
 }
 
-/* ИСПРАВЛЕНО: Стили для заглушки-круга (пока нет фото) */
+/* Стили для заглушки-круга */
 .profile-photo-wrapper {
   width: 180px;
   height: 180px;
@@ -106,7 +104,7 @@ header nav ul li {
 .avatar-fallback {
   width: 180px;
   height: 180px;
-  background: radial-gradient(circle, #1e40af 0%, #0f172a 100%);
+  background: radial-gradient(circle, #023024 0%, #0f172a 100%);
   border-radius: 50%;
   border: 4px solid #38bdf8;
   box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
@@ -129,15 +127,15 @@ header nav ul li {
   letter-spacing: -0.5px;
 }
 
-/* ИСПРАВЛЕНО: Вернули фирменный темно-красный цвет Mate Academy с анимацией изменения при наведении */
+/* Фирменный цвет Mate Academy */
 .hero-academy-link {
-  color: #ef4444; /* Темно-красный цвет */
+  color: #ef4444; 
   text-decoration: none;
   border-bottom: 2px dashed #ef4444;
-  transition: all 0.3s ease; /* Плавное перетекание цвета */
+  transition: all 0.3s ease;
 }
 .hero-academy-link:hover {
-  color: #f87171; /* Становится ярче при наведении */
+  color: #f87171;
   border-bottom-color: #f87171;
 }
 
@@ -250,13 +248,14 @@ h2 {
   color: #0f172a;
 }
 
-/* Підвал (Footer) */
+/* ИСПРАВЛЕНО: Подвал в новом превосходном цвете #023024 с градиентом вниз */
 footer {
-  background: #0f172a;
+  background: linear-gradient(to bottom, #023024 0%, #071524 100%);
   color: #94a3b8;
   padding: 60px 0;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
+  box-shadow: 0 -10px 30px rgba(2, 48, 36, 0.15);
 }
 .footer-container {
   display: flex;
