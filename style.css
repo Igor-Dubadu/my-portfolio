@@ -1,309 +1,264 @@
 /* Базові налаштування */
 html {
-    font-family: 'Roboto', Arial, sans-serif;
-    font-size: 16px;
-    scroll-behavior: smooth;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
-
 body {
-    margin: 0;
-    background-color: #f1f5f9; 
-    color: #1e293b;
-    line-height: 1.6;
+  margin: 0;
+  background-color: #f1f5f9;
+  color: #1e293b;
+  line-height: 1.6;
 }
-
 .container {
-    width: 1000px;
-    margin: 0 auto;
+  width: 1000px;
+  margin: 0 auto;
 }
 
 /* Шапка сайту */
 header {
-    background-color: #0f172a;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  background-color: #0f172a;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
-
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;             
-    box-sizing: border-box;
-    padding: 18px 40px;      
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 18px 40px;
 }
-
 .logo {
-    font-size: 20px;
-    font-weight: 700;
-    color: #ffffff; 
-    letter-spacing: 0.5px;
-    text-align: left;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-align: left;
 }
-
 .right-menu {
-    margin-left: auto; 
+  margin-left: auto;
 }
-
 header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
-
 header nav ul li {
-    margin-left: 25px;
+  margin-left: 25px;
 }
-
 .link {
-    color: #cbd5e1;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    display: inline-block;
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
-
 .link:hover {
-    color: #38bdf8; 
-    transform: scale(1.1);
+  color: #38bdf8;
+  transform: scale(1.1);
 }
 
 /* Головний блок (Hero) */
 .hero {
-    background: radial-gradient(circle, #1e3a8a 0%, #0f172a 100%);
-    color: white;
-    text-align: center;
-    padding: 120px 0;
-    border-bottom-left-radius: 24px;  
-    border-bottom-right-radius: 24px; 
-    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.2);
+  background: radial-gradient(circle, #1e3a8a 0%, #0f172a 100%);
+  color: white;
+  text-align: center;
+  padding: 60px 0 80px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.2);
+}
+.hero-container {
+  display: block;
 }
 
-.hero-container {
-    display: block;
+/* Стилі фото профілю */
+.profile-photo {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  display: block;
+  margin: 0 auto 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  transition: .3s;
+}
+.profile-photo:hover {
+  transform: scale(1.05);
 }
 
 .hero h1 {
-    font-size: 42px;
-    margin: 0 0 20px 0;
-    font-weight: 700;
+  font-size: 42px;
+  margin: 0 0 20px 0;
+  font-weight: 700;
 }
-
 .hero-academy-link {
-    color: #ef4444;
-    text-decoration: none;
-    border-bottom: 2px dashed #ef4444;
-    transition: all 0.2s;
+  color: #ef4444;
+  text-decoration: none;
+  border-bottom: 2px dashed #ef4444;
+  transition: all 0.2s;
 }
-
 .hero-academy-link:hover {
-    color: #f87171;
-    border-bottom-color: #f87171;
+  color: #f87171;
+  border-bottom-color: #f87171;
 }
-
 .hero .subtitle {
-    font-size: 20px;
-    color: #94a3b8;
-    margin-bottom: 40px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+  font-size: 20px;
+  color: #94a3b8;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Кнопка */
 .btn {
-    background: linear-gradient(45deg, #0284c7, #0ea5e9);
-    color: white;
-    text-decoration: none;
-    padding: 14px 35px;
-    border-radius: 50px; 
-    font-weight: 700;
-    transition: all 0.3s ease;
-    display: inline-block;
-    box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
+  background: linear-gradient(45deg, #0284c7, #0ea5e9);
+  color: white;
+  text-decoration: none;
+  padding: 14px 35px;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
 }
-
 .btn:hover {
-    background: linear-gradient(45deg, #0ea5e9, #0284c7);
-    transform: translateY(-3px) scale(1.03);
-    box-shadow: 0 8px 25px rgba(2, 132, 199, 0.6);
+  background: linear-gradient(45deg, #0ea5e9, #0284c7);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.6);
 }
 
 /* Секція сертифікатів */
 .certificates-section {
-    padding: 80px 0;
-    text-align: center;
+  padding: 80px 0;
+  text-align: center;
 }
-
 .section-container {
-    display: block;
+  display: block;
 }
-
 h2 {
-    font-size: 36px;
-    margin: 0 0 10px 0;
-    color: #0f172a;
+  font-size: 36px;
+  margin: 0 0 10px 0;
+  color: #0f172a;
 }
-
 .section-desc {
-    color: #64748b;
-    font-size: 16px;
-    margin-bottom: 50px;
+  color: #64748b;
+  font-size: 16px;
+  margin-bottom: 50px;
 }
 
+/* Список: теперь карточки ровно заполняют ряды слева направо */
 .certificates-list {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+  gap: 25px;
+  flex-wrap: wrap;
+  max-width: 800px; 
+  margin: 0 auto;
 }
 
 /* Білі картки */
 .cert-card {
-    background-color: #ffffff; 
-    color: #1e293b;            
-    text-decoration: none;
-    padding: 35px 25px;
-    border-radius: 20px; 
-    width: 250px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-    border: 1px solid #e2e8f0; 
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: #ffffff;
+  color: #1e293b;
+  text-decoration: none;
+  padding: 35px 25px;
+  border-radius: 20px;
+  width: 250px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e2e8f0;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
 }
-
 .cert-icon {
-    font-size: 44px;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease;
+  font-size: 44px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
 }
-
 .cert-card h3 {
-    font-size: 18px;
-    margin: 0 0 20px 0;
-    color: #0f172a;
-    font-weight: 700;
-    transition: color 0.3s ease;
+  font-size: 18px;
+  margin: 0 0 20px 0;
+  color: #0f172a;
+  font-weight: 700;
+  transition: color 0.3s ease;
 }
-
 .view-link {
-    font-size: 14px;
-    color: #0284c7; 
-    font-weight: 700;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
+  font-size: 14px;
+  color: #0284c7;
+  font-weight: 700;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
 }
-
 .cert-card:hover {
-    transform: translateY(-12px);
-    background-color: #0f172a;    
-    border-color: #38bdf8;        
-    box-shadow: 0 20px 30px -10px rgba(56, 189, 248, 0.3);
+  transform: translateY(-12px);
+  background-color: #0f172a;
+  border-color: #38bdf8;
+  box-shadow: 0 20px 30px -10px rgba(56, 189, 248, 0.3);
 }
-
 .cert-card:hover .cert-icon {
-    transform: translateY(-5px) scale(1.15);
+  transform: translateY(-5px) scale(1.15);
 }
-
 .cert-card:hover h3 {
-    color: #ffffff;
+  color: #ffffff;
 }
-
 .cert-card:hover .view-link {
-    color: #38bdf8;
-    border-bottom-color: #38bdf8;
+  color: #38bdf8;
+  border-bottom-color: #38bdf8;
 }
 
-/* ТВОЙ ЛЮБИМЫЙ ОБЪЁМНЫЙ БЛИК ПОДВАЛА НА МЕСТЕ */
+/* Підвал (Footer) */
 footer {
-    background: radial-gradient(circle, #1e3a8a 0%, #0f172a 100%); 
-    color: #94a3b8;
-    margin-top: 60px;
-    border-top-left-radius: 24px;  
-    border-top-right-radius: 24px; 
-    box-shadow: 0 -10px 25px -5px rgba(15, 23, 42, 0.2);
+  background: radial-gradient(circle, #1e3a8a 0%, #0f172a 100%);
+  color: #94a3b8;
+  margin-top: 60px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  box-shadow: 0 -10px 25px -5px rgba(15, 23, 42, 0.2);
 }
-
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;             
-    box-sizing: border-box;
-    padding: 40px 40px;      
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px 40px;
 }
-
 .footer-info {
-    max-width: 400px;
-    text-align: left;
+  max-width: 400px;
+  text-align: left;
 }
-
 .footer-info p {
-    color: #cbd5e1;
-    margin: 0;
+  color: #cbd5e1;
+  margin: 0;
 }
-
 .contacts-block {
-    text-align: left;
+  text-align: left;
 }
-
 .contacts-block h3 {
-    color: #ffffff; 
-    margin-top: 0;
-    font-size: 20px;
+  color: #ffffff;
+  margin-top: 0;
+  font-size: 20px;
 }
-
 .contacts-block p {
-    margin: 8px 0;
-    color: #cbd5e1;
+  margin: 8px 0;
+  color: #cbd5e1;
 }
-
 .footer-link {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.2s;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
 }
-
 .footer-link:hover {
-    color: #38bdf8; 
-}
-
-/* СТИЛИЗАЦИЯ СТРОГИХ КНОПОК МЕССЕНДЖЕРОВ */
-.messenger-box {
-    margin-top: 15px;
-    display: flex;
-    gap: 12px;
-}
-
-.messenger-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
-    border-radius: 8px;
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 14px;
-    background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный аккуратный фон */
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
-}
-
-.messenger-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: #38bdf8;
-    color: #38bdf8;
-    transform: translateY(-3px); /* Кнопки аккуратно взлетают */
-}
-
-.messenger-btn i {
-    font-size: 16px;
+  color: #38bdf8;
 }
