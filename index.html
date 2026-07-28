@@ -7,13 +7,14 @@
   <link rel="preconnect" href="https://googleapis.com">
   <link rel="preconnect" href="https://gstatic.com" crossorigin>
   <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <!-- Принудительно сбрасываем кэш стилей с помощью версии ?v=4 -->
-  <link rel="stylesheet" href="style.css?v=4">
+  <!-- Принудительно сбрасываем кэш стилей с помощью версии ?v=5 -->
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
   <header>
-    <div class="container header-container">
+    <!-- Убрали класс container, чтобы логотип прижался к левому краю экрана -->
+    <div class="header-container">
       <span class="logo">Ігор Морозов <span class="badge-qa">QA Engineer</span></span>
       <nav class="right-menu">
         <ul>
@@ -28,11 +29,16 @@
   <main>
     <section id="about" class="hero">
       <div class="container hero-container">
-        <!-- Аватарка (закиньте файл profile.jpg в папку images) -->
-        <img src="images/profile.jpg" alt="Ігор Морозов" class="profile-photo" onerror="this.src='https://unsplash.com';">
         
+        <!-- ИСПРАВЛЕНО: Профессиональная QA-заглушка. Если загрузите файл images/profile.jpg, автоматически появится ваше фото -->
+        <div class="profile-photo-wrapper">
+          <img src="images/profile.jpg" alt="Ігор Морозов" class="profile-photo" onerror="this.style.display='none'; document.getElementById('qa-avatar-fallback').style.display='flex';">
+          <div id="qa-avatar-fallback" class="avatar-fallback" style="display:none;">🛡️</div>
+        </div>
+        
+        <!-- ИСПРАВЛЕНО: Вернули фирменный темно-красный цвет для Mate Academy -->
         <h1>Навчання та сертифікація в <a href="https://mate.academy" target="_blank" class="hero-academy-link">Mate Academy</a></h1>
-        <p class="subtitle">Цифрове портфоліо підтверджених технічних кваліфікацій, навичок тестування та автоматизації.</p>
+        <p class="subtitle">Цифрове портфоліо підтверджених технічних кваліфикацій, навичок тестування та автоматизації.</p>
         <a href="#certificates" class="btn">Переглянути сертифікати</a>
       </div>
     </section>
