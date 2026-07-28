@@ -2,22 +2,23 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title>Моє Портфоліо Сертифікатів</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ігор Морозов | QA Portfolio</title>
   <link rel="preconnect" href="https://googleapis.com">
   <link rel="preconnect" href="https://gstatic.com" crossorigin>
-  <link href="https://googleapis.com" rel="stylesheet">
-  <!-- Добавили ?v=2 в конец, чтобы заставить браузер принудительно обновить стили -->
-  <link rel="stylesheet" href="style.css?v=2">
+  <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Принудительно сбрасываем кэш стилей с помощью версии ?v=4 -->
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
   <header>
     <div class="container header-container">
-      <span class="logo">Морозов Ігор Олександрович</span>
+      <span class="logo">Ігор Морозов <span class="badge-qa">QA Engineer</span></span>
       <nav class="right-menu">
         <ul>
           <li><a href="#about" class="link">Головна</a></li>
-          <li><a href="#certificates" class="link">Мої Сертифікати</a></li>
+          <li><a href="#certificates" class="link">Сертифікати</a></li>
           <li><a href="#footer-contacts" class="link">Контакти</a></li>
         </ul>
       </nav>
@@ -27,70 +28,76 @@
   <main>
     <section id="about" class="hero">
       <div class="container hero-container">
-        <!-- Фото профиля. Если захотите его добавить, просто закиньте картинку profile.jpg в папку images -->
-        <img src="images/profile.jpg" alt="Морозов Ігор Олександрович" class="profile-photo" onerror="this.style.display='none'">
+        <!-- Аватарка (закиньте файл profile.jpg в папку images) -->
+        <img src="images/profile.jpg" alt="Ігор Морозов" class="profile-photo" onerror="this.src='https://unsplash.com';">
         
-        <h1>Сертифікати та навчання в <a href="https://mate.academy" target="_blank" class="hero-academy-link">Mate Academy</a></h1>
-        <p class="subtitle">Повний список підтверджених кваліфікацій та успішно завершених курсів.</p>
-        <a href="#certificates" class="btn">Переглянути документи</a>
+        <h1>Навчання та сертифікація в <a href="https://mate.academy" target="_blank" class="hero-academy-link">Mate Academy</a></h1>
+        <p class="subtitle">Цифрове портфоліо підтверджених технічних кваліфікацій, навичок тестування та автоматизації.</p>
+        <a href="#certificates" class="btn">Переглянути сертифікати</a>
       </div>
     </section>
 
     <section id="certificates" class="certificates-section">
       <div class="container section-container">
-        <h2>Офіційні Документи про Навчання</h2>
-        <p class="section-desc">Натисніть на будь-яку картку нижче, щоб відкрити оригінальний PDF-сертифікат у новій вкладці:</p>
+        <h2>Офіційні модульні сертифікати</h2>
+        <p class="section-desc">Натисніть на будь-яку картку, щоб переглянути оригінальний PDF-документ у новій вкладці:</p>
         
-        <!-- Сетка из 8 сертификатов (Все пути ведут в папку images) -->
         <div class="certificates-list">
           
+          <!-- 1. QA Basics -->
           <a href="images/morozov-certificate.pdf" target="_blank" class="cert-card">
-            <div class="cert-icon">📄</div>
-            <h3>Сертифікат №1</h3>
-            <span class="view-link">Відкрити PDF</span>
+            <div class="cert-icon icon-qa">🛡️</div>
+            <h3>QA Basics</h3>
+            <span class="view-link">Переглянути PDF</span>
           </a>
 
+          <!-- 2. GenAI Essentials -->
           <a href="images/morozov-certificate (1).pdf" target="_blank" class="cert-card">
-            <div class="cert-icon">📄</div>
-            <h3>Сертифікат №2</h3>
-            <span class="view-link">Відкрити PDF</span>
+            <div class="cert-icon icon-ai">🤖</div>
+            <h3>GenAI Essentials</h3>
+            <span class="view-link">Переглянути PDF</span>
           </a>
 
+          <!-- 3. SQL Basics -->
           <a href="images/morozov-certificate (2).pdf" target="_blank" class="cert-card">
-            <div class="cert-icon">📄</div>
-            <h3>Сертифікат №3</h3>
-            <span class="view-link">Відкрити PDF</span>
+            <div class="cert-icon icon-db">🗄️</div>
+            <h3>SQL Basics</h3>
+            <span class="view-link">Переглянути PDF</span>
           </a>
 
+          <!-- 4. Git and Terminal -->
           <a href="images/morozov-certificate (3).pdf" target="_blank" class="cert-card">
-            <div class="cert-icon">📄</div>
-            <h3>Сертифікат №4</h3>
-            <span class="view-link">Відкрити PDF</span>
+            <div class="cert-icon icon-git">💻</div>
+            <h3>Git and Terminal</h3>
+            <span class="view-link">Переглянути PDF</span>
           </a>
 
+          <!-- 5. JavaScript Basics -->
           <a href="images/morozov-certificate (4).pdf" target="_blank" class="cert-card">
-            <div class="cert-icon">📄</div>
-            <h3>Сертифікат №5</h3>
-            <span class="view-link">Відкрити PDF</span>
+            <div class="cert-icon icon-js">🟨</div>
+            <h3>JavaScript Basics</h3>
+            <span class="view-link">Переглянути PDF</span>
           </a>
 
+          <!-- 6. HTML + CSS Basics -->
           <a href="images/morozov-certificate (5).pdf" target="_blank" class="cert-card">
-            <div class="cert-icon">📄</div>
-            <h3>Сертифікат №6</h3>
-            <span class="view-link">Відкрити PDF</span>
+            <div class="cert-icon icon-html">🌐</div>
+            <h3>HTML + CSS Basics</h3>
+            <span class="view-link">Переглянути PDF</span>
           </a>
 
+          <!-- 7. Get Started -->
           <a href="images/morozov-certificate (6).pdf" target="_blank" class="cert-card">
-            <div class="cert-icon">📄</div>
-            <h3>Сертифікат №7</h3>
-            <span class="view-link">Відкрити PDF</span>
+            <div class="cert-icon icon-start">🚀</div>
+            <h3>Get Started</h3>
+            <span class="view-link">Переглянути PDF</span>
           </a>
 
-          <!-- ИСПРАВЛЕНО: Новый 8-й сертификат ссылается на файл morozov-certificate (7).pdf в папке images -->
+          <!-- 8. JavaScript Basics Extended -->
           <a href="images/morozov-certificate (7).pdf" target="_blank" class="cert-card">
-            <div class="cert-icon">📄</div>
-            <h3>Сертифікат №8</h3>
-            <span class="view-link">Відкрити PDF</span>
+            <div class="cert-icon icon-js-ext">⚡</div>
+            <h3>JS Basics Extended</h3>
+            <span class="view-link">Переглянути PDF</span>
           </a>
 
         </div>
@@ -101,18 +108,23 @@
   <footer id="footer-contacts">
     <div class="container footer-container">
       <div class="footer-info">
-        <p>© 2026 Моє Цифрове Портфоліо | Всі права захищені</p>
+        <h3>Ігор Морозов</h3>
+        <p>Спеціаліст із забезпечення якості програмного забезпечення (QA).</p>
+        <p class="copyright">© 2026 | Всі права захищені</p>
       </div>
       <div class="contacts-block">
-        <h3>Мої контакти:</h3>
-        <p>📞 Телефон: <a href="tel:+380664765470" class="footer-link">+380 (66) 476-54-70</a></p>
-        <p>✉️ Email: <a href="mailto:i.a.morozov90@gmail.com" class="footer-link">i.a.morozov90@gmail.com</a></p>
-        <p>Telegram: <a href="https://t.me" target="_blank" class="footer-link">+380 (66) 476-54-70</a></p>
-        <p>Viber: <a href="viber://chat?number=%2B380664765470" target="_blank" class="footer-link">+380 (66) 476-54-70</a></p>
+        <h3>Зв'язатися зі мною:</h3>
+        <div class="contacts-grid">
+          <p>📞 Тел: <a href="tel:+380664765470" class="footer-link">+380 (66) 476-54-70</a></p>
+          <p>✉️ Email: <a href="mailto:i.a.morozov90@gmail.com" class="footer-link">i.a.morozov90@gmail.com</a></p>
+        </div>
+        <div class="messenger-box">
+          <a href="https://t.me" target="_blank" class="messenger-btn tg-btn">Telegram</a>
+          <a href="viber://chat?number=%2B380664765470" target="_blank" class="messenger-btn viber-btn">Viber</a>
+        </div>
       </div>
     </div>
   </footer>
 
 </body>
 </html>
-
