@@ -1,46 +1,55 @@
-/* Базові налаштування */
+/* Базові налаштування з преміальним шрифтом */
 html {
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Plus Jakarta Sans', 'Roboto', sans-serif;
   font-size: 16px;
   scroll-behavior: smooth;
 }
 body {
   margin: 0;
-  background-color: #f1f5f9;
-  color: #1e293b;
+  background-color: #f8fafc;
+  color: #0f172a;
   line-height: 1.6;
 }
 .container {
-  width: 1000px;
+  width: 100%;
+  max-width: 1140px;
   margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 /* Шапка сайту */
 header {
-  background-color: #0f172a;
+  background-color: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(8px);
   color: white;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 18px 40px;
+  padding: 16px 20px;
 }
 .logo {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 700;
   color: #ffffff;
-  letter-spacing: 0.5px;
-  text-align: left;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
-.right-menu {
-  margin-left: auto;
+.badge-qa {
+  background: #38bdf8;
+  color: #0f172a;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 header nav ul {
   list-style: none;
@@ -49,104 +58,97 @@ header nav ul {
   display: flex;
 }
 header nav ul li {
-  margin-left: 25px;
+  margin-left: 30px;
 }
 .link {
-  color: #cbd5e1;
+  color: #94a3b8;
   text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  display: inline-block;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.25s ease;
 }
 .link:hover {
   color: #38bdf8;
-  transform: scale(1.1);
 }
 
 /* Головний блок (Hero) */
 .hero {
-  background: radial-gradient(circle, #1e3a8a 0%, #0f172a 100%);
+  background: radial-gradient(circle at top, #1e3a8a 0%, #0f172a 100%);
   color: white;
   text-align: center;
-  padding: 60px 0 80px;
-  border-bottom-left-radius: 24px;
-  border-bottom-right-radius: 24px;
-  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.2);
+  padding: 90px 20px;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
 }
-.hero-container {
-  display: block;
-}
-
-/* Стилі фото профілю */
 .profile-photo {
-  width: 220px;
-  height: 220px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border-radius: 50%;
-  border: 5px solid #ffffff;
+  border: 4px solid rgba(56, 189, 248, 0.4);
   display: block;
-  margin: 0 auto 30px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.3);
-  transition: .3s;
+  margin: 0 auto 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .profile-photo:hover {
-  transform: scale(1.05);
+  transform: scale(1.08) rotate(2deg);
+  border-color: #38bdf8;
 }
-
 .hero h1 {
-  font-size: 42px;
-  margin: 0 0 20px 0;
+  font-size: 40px;
+  margin: 0 0 15px 0;
   font-weight: 700;
+  letter-spacing: -0.5px;
 }
 .hero-academy-link {
-  color: #ef4444;
+  color: #38bdf8;
   text-decoration: none;
-  border-bottom: 2px dashed #ef4444;
+  border-bottom: 2px solid rgba(56, 189, 248, 0.2);
   transition: all 0.2s;
 }
 .hero-academy-link:hover {
-  color: #f87171;
-  border-bottom-color: #f87171;
+  color: #ffffff;
+  border-bottom-color: #ffffff;
 }
 .hero .subtitle {
-  font-size: 20px;
+  font-size: 18px;
   color: #94a3b8;
-  margin-bottom: 40px;
-  max-width: 600px;
+  margin-bottom: 35px;
+  max-width: 650px;
   margin-left: auto;
   margin-right: auto;
 }
-
-/* Кнопка */
 .btn {
-  background: linear-gradient(45deg, #0284c7, #0ea5e9);
-  color: white;
+  background: #38bdf8;
+  color: #0f172a;
   text-decoration: none;
   padding: 14px 35px;
-  border-radius: 50px;
+  border-radius: 12px;
   font-weight: 700;
-  transition: all 0.3s ease;
+  font-size: 15px;
+  transition: all 0.25s ease;
   display: inline-block;
-  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
+  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.3);
 }
 .btn:hover {
-  background: linear-gradient(45deg, #0ea5e9, #0284c7);
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.6);
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(255, 255, 255, 0.2);
 }
 
 /* Секція сертифікатів */
 .certificates-section {
-  padding: 80px 0;
+  padding: 90px 0;
   text-align: center;
 }
-.section-container {
-  display: block;
-}
 h2 {
-  font-size: 36px;
-  margin: 0 0 10px 0;
+  font-size: 32px;
+  margin: 0 0 12px 0;
   color: #0f172a;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 .section-desc {
   color: #64748b;
@@ -154,111 +156,180 @@ h2 {
   margin-bottom: 50px;
 }
 
-/* Список: теперь карточки ровно заполняют ряды слева направо */
+/* Сетка карточек на CSS Grid (Всегда ровная) */
 .certificates-list {
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 25px;
-  flex-wrap: wrap;
-  max-width: 800px; 
-  margin: 0 auto;
 }
 
-/* Білі картки */
+/* Премиальный UI дизайн карточек */
 .cert-card {
   background-color: #ffffff;
   color: #1e293b;
   text-decoration: none;
-  padding: 35px 25px;
+  padding: 30px 24px;
   border-radius: 20px;
-  width: 250px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
   border: 1px solid #e2e8f0;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
 }
 .cert-icon {
-  font-size: 44px;
-  margin-bottom: 15px;
-  transition: transform 0.3s ease;
+  font-size: 40px;
+  width: 70px;
+  height: 70px;
+  background-color: #f1f5f9;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
 }
 .cert-card h3 {
   font-size: 18px;
-  margin: 0 0 20px 0;
+  margin: 0 0 15px 0;
   color: #0f172a;
   font-weight: 700;
-  transition: color 0.3s ease;
 }
 .view-link {
-  font-size: 14px;
-  color: #0284c7;
-  font-weight: 700;
-  border-bottom: 2px solid transparent;
-  transition: all 0.3s ease;
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 600;
+  padding: 6px 16px;
+  background: #f1f5f9;
+  border-radius: 8px;
+  transition: all 0.25s ease;
 }
+
+/* Эффекты при наведении */
 .cert-card:hover {
-  transform: translateY(-12px);
-  background-color: #0f172a;
+  transform: translateY(-8px);
   border-color: #38bdf8;
-  box-shadow: 0 20px 30px -10px rgba(56, 189, 248, 0.3);
+  box-shadow: 0 20px 25px -5px rgba(56, 189, 248, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
 }
 .cert-card:hover .cert-icon {
-  transform: translateY(-5px) scale(1.15);
-}
-.cert-card:hover h3 {
-  color: #ffffff;
+  background-color: #0f172a;
+  transform: scale(1.05);
 }
 .cert-card:hover .view-link {
-  color: #38bdf8;
-  border-bottom-color: #38bdf8;
+  background-color: #38bdf8;
+  color: #0f172a;
 }
 
 /* Підвал (Footer) */
 footer {
-  background: radial-gradient(circle, #1e3a8a 0%, #0f172a 100%);
+  background: #0f172a;
   color: #94a3b8;
-  margin-top: 60px;
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
-  box-shadow: 0 -10px 25px -5px rgba(15, 23, 42, 0.2);
+  padding: 60px 0;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
 }
 .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 40px 40px;
+  gap: 40px;
 }
-.footer-info {
-  max-width: 400px;
-  text-align: left;
+.footer-info h3 {
+  color: white;
+  margin: 0 0 10px 0;
+  font-size: 20px;
 }
 .footer-info p {
-  color: #cbd5e1;
-  margin: 0;
+  margin: 5px 0;
+  font-size: 14px;
 }
-.contacts-block {
-  text-align: left;
+.copyright {
+  margin-top: 20px !important;
+  color: #475569;
 }
 .contacts-block h3 {
   color: #ffffff;
-  margin-top: 0;
-  font-size: 20px;
+  margin: 0 0 15px 0;
+  font-size: 18px;
 }
-.contacts-block p {
-  margin: 8px 0;
-  color: #cbd5e1;
+.contacts-grid p {
+  margin: 6px 0;
+  font-size: 15px;
 }
 .footer-link {
-  color: white;
+  color: #cbd5e1;
   text-decoration: none;
-  font-weight: bold;
   transition: color 0.2s;
 }
 .footer-link:hover {
   color: #38bdf8;
+}
+
+/* Стилизация интерактивных кнопок мессенджеров */
+.messenger-box {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+.messenger-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.25s ease;
+}
+.tg-btn {
+  background-color: #0088cc;
+  box-shadow: 0 4px 12px rgba(0, 136, 204, 0.3);
+}
+.viber-btn {
+  background-color: #732dd9;
+  box-shadow: 0 4px 12px rgba(115, 45, 217, 0.3);
+}
+.messenger-btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================
+   Адаптивность для мобильных телефонов
+   ========================================== */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  header nav ul li {
+    margin: 0 12px;
+  }
+  .hero {
+    padding: 60px 15px;
+  }
+  .hero h1 {
+    font-size: 28px;
+  }
+  .hero .subtitle {
+    font-size: 15px;
+  }
+  .certificates-section {
+    padding: 60px 0;
+  }
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  .contacts-block, .footer-info {
+    width: 100%;
+  }
+  .messenger-box {
+    justify-content: center;
+  }
 }
