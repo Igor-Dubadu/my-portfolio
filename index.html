@@ -1,99 +1,118 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <title>Моє Портфоліо Сертифікатів</title>
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Підключаємо іконки для контактів -->
-    <link rel="stylesheet" href="https://cloudflare.com">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Моє Портфоліо Сертифікатів</title>
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com" rel="stylesheet">
+  <!-- Добавили ?v=2 в конец, чтобы заставить браузер принудительно обновить стили -->
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
-    <header>
-        <div class="container header-container">
-            <span class="logo">Морозов Ігор Олександрович</span>
-            <nav class="right-menu">
-                <ul>
-                    <li><a href="#about" class="link">Головна</a></li>
-                    <li><a href="#certificates" class="link">Мої Сертифікати</a></li>
-                    <li><a href="#footer-contacts" class="link">Контакти</a></li>
-                </ul>
-            </nav>
+  <header>
+    <div class="container header-container">
+      <span class="logo">Морозов Ігор Олександрович</span>
+      <nav class="right-menu">
+        <ul>
+          <li><a href="#about" class="link">Головна</a></li>
+          <li><a href="#certificates" class="link">Мої Сертифікати</a></li>
+          <li><a href="#footer-contacts" class="link">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="hero">
+      <div class="container hero-container">
+        <!-- Фото профиля. Если захотите его добавить, просто закиньте картинку profile.jpg в папку images -->
+        <img src="images/profile.jpg" alt="Морозов Ігор Олександрович" class="profile-photo" onerror="this.style.display='none'">
+        
+        <h1>Сертифікати та навчання в <a href="https://mate.academy" target="_blank" class="hero-academy-link">Mate Academy</a></h1>
+        <p class="subtitle">Повний список підтверджених кваліфікацій та успішно завершених курсів.</p>
+        <a href="#certificates" class="btn">Переглянути документи</a>
+      </div>
+    </section>
+
+    <section id="certificates" class="certificates-section">
+      <div class="container section-container">
+        <h2>Офіційні Документи про Навчання</h2>
+        <p class="section-desc">Натисніть на будь-яку картку нижче, щоб відкрити оригінальний PDF-сертифікат у новій вкладці:</p>
+        
+        <!-- Сетка из 8 сертификатов (Все пути ведут в папку images) -->
+        <div class="certificates-list">
+          
+          <a href="images/morozov-certificate.pdf" target="_blank" class="cert-card">
+            <div class="cert-icon">📄</div>
+            <h3>Сертифікат №1</h3>
+            <span class="view-link">Відкрити PDF</span>
+          </a>
+
+          <a href="images/morozov-certificate (1).pdf" target="_blank" class="cert-card">
+            <div class="cert-icon">📄</div>
+            <h3>Сертифікат №2</h3>
+            <span class="view-link">Відкрити PDF</span>
+          </a>
+
+          <a href="images/morozov-certificate (2).pdf" target="_blank" class="cert-card">
+            <div class="cert-icon">📄</div>
+            <h3>Сертифікат №3</h3>
+            <span class="view-link">Відкрити PDF</span>
+          </a>
+
+          <a href="images/morozov-certificate (3).pdf" target="_blank" class="cert-card">
+            <div class="cert-icon">📄</div>
+            <h3>Сертифікат №4</h3>
+            <span class="view-link">Відкрити PDF</span>
+          </a>
+
+          <a href="images/morozov-certificate (4).pdf" target="_blank" class="cert-card">
+            <div class="cert-icon">📄</div>
+            <h3>Сертифікат №5</h3>
+            <span class="view-link">Відкрити PDF</span>
+          </a>
+
+          <a href="images/morozov-certificate (5).pdf" target="_blank" class="cert-card">
+            <div class="cert-icon">📄</div>
+            <h3>Сертифікат №6</h3>
+            <span class="view-link">Відкрити PDF</span>
+          </a>
+
+          <a href="images/morozov-certificate (6).pdf" target="_blank" class="cert-card">
+            <div class="cert-icon">📄</div>
+            <h3>Сертифікат №7</h3>
+            <span class="view-link">Відкрити PDF</span>
+          </a>
+
+          <!-- ИСПРАВЛЕНО: Новый 8-й сертификат ссылается на файл morozov-certificate (7).pdf в папке images -->
+          <a href="images/morozov-certificate (7).pdf" target="_blank" class="cert-card">
+            <div class="cert-icon">📄</div>
+            <h3>Сертифікат №8</h3>
+            <span class="view-link">Відкрити PDF</span>
+          </a>
+
         </div>
-    </header>
+      </div>
+    </section>
+  </main>
 
-    <main>
-        <section id="about" class="hero">
-            <div class="container hero-container">
-                <h1>Сертифікати та навчання в <a href="https://mate.academy" target="_blank" class="hero-academy-link">Mate Academy</a></h1>
-                <p class="subtitle">Повний список підтверджених кваліфікацій та успішно завершених курсів.</p>
-                <a href="#certificates" class="btn">Переглянути документи</a>
-            </div>
-        </section>
-
-        <section id="certificates" class="certificates-section">
-            <div class="container section-container">
-                <h2>Офіційні Документи про Навчання</h2>
-                <p class="section-desc">Натисніть на будь-яку картку нижче, щоб відкрити оригінальний PDF-сертифікат у новій вкладці:</p>
-                
-                <div class="certificates-list">
-                    <a href="images/morozov-certificate.pdf" target="_blank" class="cert-card">
-                        <div class="cert-icon">📄</div>
-                        <h3>Сертифікат №1</h3>
-                        <span class="view-link">Відкрити PDF</span>
-                    </a>
-                    <a href="images/morozov-certificate (1).pdf" target="_blank" class="cert-card">
-                        <div class="cert-icon">📄</div>
-                        <h3>Сертифікат №2</h3>
-                        <span class="view-link">Відкрити PDF</span>
-                    </a>
-                    <a href="images/morozov-certificate (2).pdf" target="_blank" class="cert-card">
-                        <div class="cert-icon">📄</div>
-                        <h3>Сертифікат №3</h3>
-                        <span class="view-link">Відкрити PDF</span>
-                    </a>
-                    <a href="images/morozov-certificate (3).pdf" target="_blank" class="cert-card">
-                        <div class="cert-icon">📄</div>
-                        <h3>Сертифікат №4</h3>
-                        <span class="view-link">Відкрити PDF</span>
-                    </a>
-                    <a href="images/morozov-certificate (4).pdf" target="_blank" class="cert-card">
-                        <div class="cert-icon">📄</div>
-                        <h3>Сертифікат №5</h3>
-                        <span class="view-link">Відкрити PDF</span>
-                    </a>
-                    <a href="images/morozov-certificate (5).pdf" target="_blank" class="cert-card">
-                        <div class="cert-icon">📄</div>
-                        <h3>Сертифікат №6</h3>
-                        <span class="view-link">Відкрити PDF</span>
-                    </a>
-                    <a href="images/morozov-certificate (6).pdf" target="_blank" class="cert-card">
-                        <div class="cert-icon">📄</div>
-                        <h3>Сертифікат №7</h3>
-                        <span class="view-link">Відкрити PDF</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer id="footer-contacts">
-        <div class="container footer-container">
-            <div class="footer-info">
-                <p>© 2026 Моє Цифрове Портфоліо | Всі права захищені</p>
-            </div>
-            <div class="contacts-block">
-                <h3>Мої контакти:</h3>
-                <p>📞 Телефон: <a href="tel:+380664765470" class="footer-link">+380 (66) 476-54-70</a></p>
-                <p>✉️ Email: <a href="mailto:i.a.morozov90@gmail.com" class="footer-link">i.a.morozov90@gmail.com</a></p>
-                <p><i class="fa-brands fa-telegram" style="color: white; font-size: 16px;"></i> Telegram: <a href="https://t.me" target="_blank" class="footer-link">+380 (66) 476-54-70</a></p>
-                <p><i class="fa-brands fa-viber" style="color: white; font-size: 16px;"></i> Viber: <a href="viber://chat?number=%2B380664765470" target="_blank" class="footer-link">+380 (66) 476-54-70</a></p>
-            </div>
-        </div>
-    </footer>
+  <footer id="footer-contacts">
+    <div class="container footer-container">
+      <div class="footer-info">
+        <p>© 2026 Моє Цифрове Портфоліо | Всі права захищені</p>
+      </div>
+      <div class="contacts-block">
+        <h3>Мої контакти:</h3>
+        <p>📞 Телефон: <a href="tel:+380664765470" class="footer-link">+380 (66) 476-54-70</a></p>
+        <p>✉️ Email: <a href="mailto:i.a.morozov90@gmail.com" class="footer-link">i.a.morozov90@gmail.com</a></p>
+        <p>Telegram: <a href="https://t.me" target="_blank" class="footer-link">+380 (66) 476-54-70</a></p>
+        <p>Viber: <a href="viber://chat?number=%2B380664765470" target="_blank" class="footer-link">+380 (66) 476-54-70</a></p>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
+
