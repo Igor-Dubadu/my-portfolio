@@ -20,7 +20,7 @@ body {
 
 /* Шапка сайту */
 header {
-  background-color: rgba(15, 23, 42, 0.95);
+  background-color: rgba(#023024f2);
   backdrop-filter: blur(8px);
   color: white;
   position: sticky;
